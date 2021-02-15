@@ -1,0 +1,21 @@
+let sum = 0;
+let term = {
+  Беларусь: 15,
+  Бразилия: 25,
+  Китай: 19,
+  Канада: 14,
+  США: 16,
+}
+for (let i in term) sum += term[i];
+let avr = sum / Object.keys(term).length;
+console.log("Средняя температура всех стран: " + avr);
+
+function maxT(obj) {
+  let max = 0;
+  for (let i in obj) {
+      if(max < obj[i]) max = obj[i];
+  }
+  return max;
+}
+let max = maxT(term);
+console.log("Максимальная температура среди стран: " + max);
